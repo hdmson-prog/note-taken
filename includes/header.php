@@ -1,7 +1,5 @@
 <?php
-
 declare(strict_types=1);
-
 $pageTitle = $pageTitle ?? APP_NAME;
 $user = current_user();
 $flashes = get_flashes();
@@ -12,12 +10,10 @@ $flashes = get_flashes();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($pageTitle) ?> | <?= e(APP_NAME) ?></title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.snow.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/github-dark.min.css" rel="stylesheet">
+    <link href="<?= e(app_url('assets/vendor/css/fonts.css')) ?>" rel="stylesheet">
+    <link href="<?= e(app_url('assets/vendor/css/bootstrap.min.css')) ?>" rel="stylesheet">
+    <link href="<?= e(app_url('assets/vendor/css/quill.snow.css')) ?>" rel="stylesheet">
+    <link href="<?= e(app_url('assets/vendor/css/github-dark.min.css')) ?>" rel="stylesheet">
     <link href="<?= e(app_url('assets/css/app.css')) ?>" rel="stylesheet">
 </head>
 <body>
